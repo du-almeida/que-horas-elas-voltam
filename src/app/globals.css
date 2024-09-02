@@ -54,3 +54,62 @@
     flex-direction:column;
     justify-content: center;
 }
+
+
+/* INICIO CADASTRO PRODUTOS */
+.tituloCp{
+    width: 210px;
+    margin: 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.textoTiluloCp{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    color:#4A6942;
+    text-align: center;
+}
+
+.linhaTituloCp{
+    width: 50px;
+    height: 5px;
+    background-color: #C43E3E;
+    border: #C43E3E solid 3px;
+    border-radius: 16px;
+}
+
+.groupInputCp{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    flex-direction: row; 
+}
+
+.labelCp{
+    color: #4A6942;
+    display: flex;
+    flex-direction:column;
+    margin: 20px;
+
+}
+
+#inputCp{
+    width: 350px;
+    height: 40px;
+    border: #91C483 solid 3px;
+    border-radius: 8px;
+    outline: none;
+}
+
+#inputCpSKU {
+    width: 150px;
+    height: 40px;
+    border: #91C483 solid 3px;
+    border-radius: 8px;
+    outline: none;
+}
+/* FIM CADASTRO DE PRODUTOS */
