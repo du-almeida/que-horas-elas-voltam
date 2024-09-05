@@ -20,10 +20,9 @@ export default function Login() {
     <>
       <div className="loginUser">
         <div className="divImag">
-          <div className="divQhorasElas">
             <div className="imgQhorasElas">
               <Image
-                src="/img/que-horas.png" // Caminho da imagem
+                src="/img/QHEV-Login.png" // Caminho da imagem
                 alt="Logo Que Horas," // Descrição da imagem para acessibilidade
                 width={464} // Largura da imagem em pixels
                 height={320} // Altura da imagem em pixels
@@ -31,28 +30,6 @@ export default function Login() {
                 border-radius={15}
               />
             </div>
-
-            <div className="imgQhorasElas">
-              <Image
-                src="/img/elas.png" // Caminho da imagem
-                alt="Logo Elas" // Descrição da imagem para acessibilidade
-                width={464} // Largura da imagem em pixels
-                height={320} // Altura da imagem em pixels
-                layout="responsive" // Layout da imagem (opcional: "fixed", "intrinsic", "responsive")
-              />
-            </div>
-          </div>
-
-          <div className="imgVoltam rounded-2xl" style={imageStyle}>
-            <Image
-              src="/img/voltam.png" // Caminho da imagem
-              alt="Logo Voltam" // Descrição da imagem para acessibilidade
-              width={221} // Largura da imagem em pixels
-              height={665} // Altura da imagem em pixels
-              border-radius={15}
-              layout="responsive" // Layout da imagem (opcional: "fixed", "intrinsic", "responsive")
-            />
-          </div>
         </div>
 
         <div className="formLogin">
@@ -85,7 +62,6 @@ export default function Login() {
                   name=""
                   id="inputLogin"
                   required
-                  
                 />
               </div>
 

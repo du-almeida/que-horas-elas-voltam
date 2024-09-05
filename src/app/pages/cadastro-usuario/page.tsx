@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import { Input } from "@nextui-org/react";
+import { CalendarDate, DateInput, Input } from "@nextui-org/react";
 import Image from "next/image";
-import styles from "./styles.module.css";
 import { EyeSlashFilledIcon } from "../../components/bottons/EyeSlashFilledIcon";
 import { EyeFilledIcon } from "../../components/bottons/EyeFilledIcon";
-import PasswordInput from "@/app/components/bottons/password";
 
-export default function Login() {
+
+export default function CadastroUsuario() {
   const [isVisible, setIsVisible] = React.useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
@@ -16,46 +15,24 @@ export default function Login() {
     borderRadius: "15",
   };
 
+  function parseDate(arg0: string): any {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <>
       <div className="loginUser">
-        <div className="divImag">
-          <div className="divQhorasElas">
-            <div className="imgQhorasElas">
-              <Image
-                src="/img/que-horas.png" // Caminho da imagem
-                alt="Logo Que Horas," // Descrição da imagem para acessibilidade
-                width={464} // Largura da imagem em pixels
-                height={320} // Altura da imagem em pixels
-                layout="responsive" // Layout da imagem (opcional: "fixed", "intrinsic", "responsive")
-                border-radius={15}
-              />
-            </div>
-
-            <div className="imgQhorasElas">
-              <Image
-                src="/img/elas.png" // Caminho da imagem
-                alt="Logo Elas" // Descrição da imagem para acessibilidade
-                width={464} // Largura da imagem em pixels
-                height={320} // Altura da imagem em pixels
-                layout="responsive" // Layout da imagem (opcional: "fixed", "intrinsic", "responsive")
-              />
-            </div>
-          </div>
-
-          <div className="imgVoltam rounded-2xl" style={imageStyle}>
-            <Image
-              src="/img/voltam.png" // Caminho da imagem
-              alt="Logo Voltam" // Descrição da imagem para acessibilidade
-              width={221} // Largura da imagem em pixels
-              height={665} // Altura da imagem em pixels
-              border-radius={15}
-              layout="responsive" // Layout da imagem (opcional: "fixed", "intrinsic", "responsive")
-            />
-          </div>
+        <div className="divImagCadastro">
+          <Image
+            src="/img/QHEV-CADASTRO.png" // Caminho da imagem
+            alt="Logo Que Horas Elas Voltam," // Descrição da imagem para acessibilidade
+            width={689} // Largura da imagem em pixels
+            height={530} // Altura da imagem em pixels
+            layout="responsive" // Layout da imagem (opcional: "fixed", "intrinsic", "responsive")
+          />
         </div>
 
-        <div className="formLogin">
+        <div className="formCadastro">
           <div className="btnClose">
             <button>
               <svg
@@ -70,28 +47,59 @@ export default function Login() {
               </svg>
             </button>
           </div>
-
-          <div className="groupInputLogin">
-            <div className="tituloLogin">
-              <h1 className="textoTiluloLogin">Login</h1>
-              <div className="linhaTituloLogin"></div>
+          <div className="groupInputCadastro">
+            <div className="tituloCadastro">
+              <h1 className="textoTiluloCadastro">
+                Me conta mais, sobre você{" "}
+              </h1>
+              <div className="linhaTituloCadastro"></div>
             </div>
 
-            <div className="inputLogin">
-              <div className="labelCp">
-                <label>E-mail</label>
+            <div className="inputCadastro">
+              <div className="labelCadastroUsuario">
+                <label>Nome Completo</label>
                 <input
-                  type="email  layout:responsive"
+                  type="text  layout:responsive"
                   name=""
-                  id="inputLogin"
+                  id="inputCadastro"
                   required
                 />
               </div>
 
-              <div className="labelCp">
+              <div className="cpfAniver">
+                <div className="labelCadastroUsuario">
+                  <label>CPF</label>
+                  <input
+                    type="number  layout:responsive"
+                    name=""
+                    id="inputCadastroCPF"
+                    required
+                  />
+                </div>
+                <div className="labelCadastroUsuario">
+                  <label>Aniversário</label>
+                  <DateInput
+                    // placeholderValue={ new CalendarDate(1995, 11, 6)}
+                    id="inputCadastroAniver"
+                    className="aniversario"
+                  />
+                </div>
+              </div>
+
+              <div className="labelCadastroUsuario">
+                <label>E-mail</label>
+                <input
+                  type="email  layout:responsive"
+                  name=""
+                  id="inputCadastro"
+                  required
+                />
+              </div>
+
+              <div className="labelCadastroUsuario">
                 <label>Senha</label>
                 <Input
-                  id="inputLogin"
+                  id="inputCadastro"
                   variant="bordered"
                   placeholder="password"
                   endContent={
@@ -115,18 +123,7 @@ export default function Login() {
               </div>
 
               <div>
-                <div>
-                  <button className="btnEntrarLogin">Entrar</button>
-                </div>
-                <div>
-                  <a href="" className="redefSenha">
-                    Redefinir senha
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <button className="btnCadastrarLogin">Entrar</button>
+                <button className="btnEntrarLogin">Cadastrar</button>
               </div>
             </div>
           </div>
