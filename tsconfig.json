@@ -27,7 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/lib/dbUsuarios.js",
-    "src/app/pages/cadastro-usuario/page",
+    "src/app/pages/register/page",
     "src/app/pages/login/page.tsxs"
   ],
   "exclude": ["node_modules"]
