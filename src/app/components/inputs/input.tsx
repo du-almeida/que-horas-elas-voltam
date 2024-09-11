@@ -6,7 +6,7 @@ interface InputProps {
     name: string;
     label?: string;
     Type?: string; // Se você pretende usar um tipo de elemento, como 'input', 'textarea', etc.
-    required?: any;
+    required?: boolean;
     [key: string]: any; // Isso permite que outras propriedades sejam passadas, se necessário
   }
 
@@ -22,7 +22,7 @@ export default function Input({name, label, type, required, ...props}: InputProp
             </div>
             <Field name={name} type={type} {...props} className="p-2 rounded border-zinc-200 border border-solid outline-0 focus:border-violet-600"></Field>
             <div className="text-red-500 text-xs mt-1">
-                <ErrorMessage name="{name"></ErrorMessage>
+            <ErrorMessage name={name} component="div" className="text-red-500 text-sm mt-1" />
             </div>
         </div>
     )

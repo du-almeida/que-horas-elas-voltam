@@ -1,14 +1,14 @@
 "use client";
+import * as Yup from "yup"
 import Button from "@/app/components/buttons/button";
 import Input from "@/app/components/inputs/input";
 import { Form, Formik, FormikHelpers } from "formik";
-import Email from "next-auth/providers/email";
 import Link from "next/link";
 import React from "react";
 
 interface FormValues {
-  email: any;
-  password: any;
+  email: string;
+  password: string;
 }
 
 
@@ -19,16 +19,32 @@ export default function Login() {
     password: '',
   };
 
-  const handleSubmit = (values: FormValues, actions: FormikHelpers<FormValues>) => {
+  // const handleSubmit = (values: FormValues, actions: FormikHelpers<FormValues>) => {
     // Aqui você pode lidar com o envio do formulário, por exemplo, enviar os dados para um servidor
     // console.log(values);
-    actions.setSubmitting(false); // Finaliza o estado de submissão
-  };
+    // actions.setSubmitting(false); // Finaliza o estado de submissão
+  // };
 
+
+  const validationSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Digite um e-mail válido")
+      .required("O campo e-mail é obrigatório"),
+    password: Yup.string().required("O campo senha é obrigatório"),
+  });
+
+  async function handleSubmit(values: FormValues, actions: FormikHelpers<FormValues>) {
+    console.log(values);
+    // Simule uma requisição assíncrona
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    actions.setSubmitting(false); // Finaliza o estado de submissão
+  }
 
   return(
     <main className="min-h-screen flex items-center justify-center">
-      <Formik  initialValues={initialValues}
+      <Formik initialValues={initialValues} 
+        validationSchema={validationSchema}
         onSubmit={handleSubmit}>
         {({values}) => (
           <Form noValidate className="bg-white flex flex-col gap-2 p-4 border border-zinc-100 min-w-[300px] rounded">
