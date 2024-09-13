@@ -1,24 +1,33 @@
+
 "use client";
 import * as Yup from "yup"
 import Button from "@/app/components/buttons/button";
 import Input from "@/app/components/inputs/input";
 import { Form, Formik, FormikHelpers } from "formik";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+
+
 
 interface FormValues {
+  name: string,
   email: string;
   password: string;
 }
 
 
 export default function Register() {
-
+  const [error, setError] = useState("")
+  const [isFormSubmitting, setFormSubmitting] = useState(false);
+  const router = useRouter()
   const initialValues: FormValues = {
+    name: '',
     email: '',
     password: '',
   };
 
+  
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("O campo nome é obrigatório"),
@@ -28,12 +37,43 @@ export default function Register() {
     password: Yup.string().required("O campo senha é obrigatório"),
   });
 
-  async function handleSubmit(values: FormValues, actions: FormikHelpers<FormValues>) {
-    console.log(values);
-    // Simule uma requisição assíncrona
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  async function handleSubmit(values: { name: string; email: string; password: string; }, { resetForm }: any) {
+    setFormSubmitting(true)
+    try{
+      await fetch("http://localhost:3000/pages/register", {
+        method: "POST",
+        headers:{
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          password: values.password
+        })
+      }).then (async (res) => {
+        const result = await res.json()
 
-    actions.setSubmitting(false); // Finaliza o estado de submissão
+        if (result.status === 201){
+          alert(result.message),
+          router.push("/pages/login")
+        }else{
+          renderError(result.message);
+          resetForm();
+        }
+
+        setFormSubmitting(false);
+      })
+    } catch(error){
+      setFormSubmitting(false);
+      renderError("Erro ao criar conta, tente mais tarde!");
+    }
+  }
+
+  function renderError(msg: React.SetStateAction<string>){
+    setError(msg);
+    setTimeout(() => {
+      setError("");
+    }, 3000)
   }
 
   return(
@@ -48,7 +88,11 @@ export default function Register() {
             <Input required name="email" type="email"></Input>
             <Input required name="password" type="password" autoComplete="off"></Input>
             
-            <Button type="submit" text="Inscreva-se" className="bg-violet-600 text-white rounded p-2 cursor-pointer"></Button>
+            <Button type="submit" text={isFormSubmitting ? "Carregando...":"Inscreva-se"}   className="bg-violet-600 text-white rounded p-2 cursor-pointer"></Button>
+
+            {!values.name && !values.email && !values.password && error && (
+              <span className="text-red-500 text-sm text-center">{error}</span>
+            )}
 
             <span className="text-xs text-zinc-500">
               Já possui uma conta?
