@@ -395,3 +395,38 @@
 
 /* IMG - FIM - TELA LOGIN */
 
+/* INICIO -  GALERIA */
+
+.containerCard{
+    display: flex;
+    width: 1792px;
+}
+
+.cardProd{
+    width: 390px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #e6e8eb;
+    border-radius: 8px;
+    margin: 30px;
+}
+
+.headerCard{
+    margin-bottom: 20px;
+}
+
+.bodyCard{
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgCard{
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+/* FIM - GALERIA */
