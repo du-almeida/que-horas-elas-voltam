@@ -1,11 +1,17 @@
+'use client'
 import Image from "next/image";
+import Header from "./components/header/page";
+import Carrossel from "./components/carrossel/page";
+import ImageCarousel from "./components/carrossel/page";
+
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-center bg-slate-600">home</h1>
-
-      <div className="bg-slate-400 w-80 h-40"></div>
+    <main className="home">
+      <Header></Header>
+      
+      <div></div>
+      <ImageCarousel></ImageCarousel>
     </main>
   );
 }
