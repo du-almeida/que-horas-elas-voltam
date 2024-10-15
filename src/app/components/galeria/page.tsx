@@ -1,14 +1,13 @@
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 
-
-export default function CardProduto() {
+export default function galeriaProduto() {
   return (
     <Card className="containerCard">
       <div className="cardProd">
         <CardHeader className="headerCard">
-          <p>Brechó</p>
-          <small>-</small>
-          <h4>-</h4>
+          <h1 className="brecho">Brechó</h1>
+          <span>Troca e venda de peças</span>
+          <p>26/10</p>
         </CardHeader>
         <CardBody className="bodyCard">
           <Image
@@ -18,15 +17,15 @@ export default function CardProduto() {
             width={270}
             height={300}
           />
-          <button className="btnHeaderItem">SABER MAIS</button>
+          <button className="btnCardProd">SABER MAIS</button>
         </CardBody>
       </div>
 
       <div className="cardProd">
         <CardHeader className="headerCard">
-          <p>Oficina</p>
-          <small>Etamparia em Ecobag</small>
-          <h4>-</h4>
+          <h1 className="oficina">Oficina</h1>
+          <span>Etamparia em Ecobag</span>
+          <p>02/11</p>
         </CardHeader>
         <CardBody className="bodyCard">
           <Image
@@ -36,15 +35,15 @@ export default function CardProduto() {
             width={270}
             height={300}
           />
-          <button className="btnHeaderItem">SABER MAIS</button>
+          <button className="btnCardProd">SABER MAIS</button>
         </CardBody>
       </div>
 
       <div className="cardProd">
         <CardHeader className="headerCard">
-          <p>Oficina</p>
-          <small>Customização Roupas</small>
-          <h4>-</h4>
+          <h1 className="oficina">Oficina</h1>
+          <span>Customização Roupas</span>
+          <p>09/11</p>
         </CardHeader>
         <CardBody className="bodyCard">
           <Image
@@ -54,15 +53,15 @@ export default function CardProduto() {
             width={270}
             height={300}
           />
-          <button className="btnHeaderItem">SABER MAIS</button>
+          <button className="btnCardProd">SABER MAIS</button>
         </CardBody>
       </div>
 
       <div className="cardProd">
         <CardHeader className="headerCard">
-          <p>Oficina</p>
-          <small>Pintura em Taça</small>
-          <h4>-</h4>
+          <h1 className="oficina">Oficina</h1>
+          <span>Pintura em Taça</span>
+          <p>16/11</p>
         </CardHeader>
         <CardBody className="bodyCard">
           <Image
@@ -72,35 +71,89 @@ export default function CardProduto() {
             width={270}
             height={300}
           />
-          <button className="btnHeaderItem">SABER MAIS</button>
+          <button className="btnCardProd">SABER MAIS</button>
         </CardBody>
       </div>
 
       <div className="cardProd">
-      <CardHeader className="headerCard">
-        <p>Oficina</p>
-        <small>Criação de Arranjo de Flores</small>
-        <h4>-</h4>
-      </CardHeader>
-      <CardBody className="bodyCard">
-        <Image
-          alt="Card background"
-          className="imgCard"
-          src="https://i.pinimg.com/enabled_lo/564x/26/9a/78/269a78a84358b868cd7bd96743803f2b.jpg"
-          width={270}
-          height={300}
-        />
-        <button className="btnHeaderItem">SABER MAIS</button>
-      </CardBody>
+        <CardHeader className="headerCard">
+          <h1 className="oficina">Oficina</h1>
+          <span>Criação de Arranjo de Flores</span>
+          <p>23/11</p>
+        </CardHeader>
+        <CardBody className="bodyCard">
+          <Image
+            alt="Card background"
+            className="imgCard"
+            src="https://i.pinimg.com/enabled_lo/564x/26/9a/78/269a78a84358b868cd7bd96743803f2b.jpg"
+            width={270}
+            height={300}
+          />
+          <button className="btnCardProd">SABER MAIS</button>
+        </CardBody>
+      </div>
+
+      <div className="cardProd">
+        <CardHeader className="headerCard">
+          <h1 className="oficina">Oficina</h1>
+          <span>Aula de Massa Fresca</span>
+          <p>30/11</p>
+        </CardHeader>
+        <CardBody className="bodyCard">
+          <Image
+            alt="Card background"
+            className="imgCard"
+            src="https://i.pinimg.com/enabled_lo/564x/77/47/f1/7747f1c64d1809f30cbcc0cc9dd227ab.jpg"
+            width={270}
+            height={300}
+          />
+          <button className="btnCardProd">SABER MAIS</button>
+        </CardBody>
+      </div>
+
+      <div className="cardProd">
+        <CardHeader className="headerCard">
+          <h1 className="elasVoltam"> elas, voltam?</h1>
+          <span>Degustação de Vinho</span>
+          <p>07/12</p>
+        </CardHeader>
+        <CardBody className="bodyCard">
+          <Image
+            alt="Card background"
+            className="imgCard"
+            src="https://i.pinimg.com/originals/94/b3/54/94b354595bc0181999395e05c4527e31.jpg"
+            width={270}
+            height={300}
+          />
+          <button className="btnCardProd">SABER MAIS</button>
+        </CardBody>
+      </div>
+
+      <div className="cardProd">
+        <CardHeader className="headerCard">
+          <h1 className="viagem">Viagem</h1>
+          <span>Rio de Janeiro</span>
+          <p>18/01</p>
+        </CardHeader>
+        <CardBody className="bodyCard">
+          <Image
+            alt="Card background"
+            className="imgCard"
+            src="https://i.pinimg.com/originals/18/ce/b8/18ceb8f1444f395aaff5715444db53ec.jpg"
+            width={270}
+            height={300}
+          />
+          <button className="btnCardProd">SABER MAIS</button>
+        </CardBody>
       </div>
 
       {/* Segunda fileira */}
 
-      <div className="cardProd">
+      {/* <div className="cardProd">
       <CardHeader className="headerCard">
         <p>Aula de Massa Fresca</p>
-        <small>20/11</small>
-        <h4>Eataly</h4>
+        <span>20/11</span>
+        <p>Eataly</p>
       </CardHeader>
       <CardBody className="bodyCard">
         <Image
@@ -110,15 +163,15 @@ export default function CardProduto() {
           width={270}
           height={300}
         />
-        <button className="btnHeaderItem">SABER MAIS</button>
+        <button className="btnCardProd">SABER MAIS</button>
       </CardBody>
       </div>
 
       <div className="cardProd">
       <CardHeader className="headerCard">
         <p>Degustação de Vinho</p>
-        <small>20/11</small>
-        <h4>Evino</h4>
+        <span>20/11</span>
+        <p>Evino</p>
       </CardHeader>
       <CardBody className="bodyCard">
         <Image
@@ -128,15 +181,15 @@ export default function CardProduto() {
           width={270}
           height={300}
         />
-        <button className="btnHeaderItem">SABER MAIS</button>
+        <button className="btnCardProd">SABER MAIS</button>
       </CardBody>
       </div>
 
       <div className="cardProd">
       <CardHeader className="headerCard">
         <p>Viagem Rio de Janeiro</p>
-        <small>-</small>
-        <h4>-</h4>
+        <span>-</span>
+        <p>-</p>
       </CardHeader>
       <CardBody className="bodyCard">
         <Image
@@ -146,29 +199,27 @@ export default function CardProduto() {
           width={270}
           height={300}
         />
-        <button className="btnHeaderItem">SABER MAIS</button>
+        <button className="btnCardProd">SABER MAIS</button>
       </CardBody>
       </div>
 
       <div className="cardProd">
-      <CardHeader className="headerCard">
-        <p>Picnic</p>
-        <small>-</small>
-        <h4>-</h4>
-      </CardHeader>
-      <CardBody className="bodyCard">
-        <Image
-          alt="Card background"
-          className="imgCard"
-          src="https://i.pinimg.com/enabled_lo/564x/57/a0/1b/57a01b7440a6ac5bde67b313cad788b6.jpg"
-          width={270}
-          height={300}
-        />
-        <button className="btnHeaderItem">SABER MAIS</button>
-      </CardBody>
-      </div>
+        <CardHeader className="headerCard">
+          <p>Picnic</p>
+          <span>-</span>
+          <p>-</p>
+        </CardHeader>
+        <CardBody className="bodyCard">
+          <Image
+            alt="Card background"
+            className="imgCard"
+            src="https://i.pinimg.com/enabled_lo/564x/57/a0/1b/57a01b7440a6ac5bde67b313cad788b6.jpg"
+            width={270}
+            height={300}
+          />
+          <button className="btnCardProd">SABER MAIS</button>
+        </CardBody>
+      </div> */}
     </Card>
-
-    
   );
 }

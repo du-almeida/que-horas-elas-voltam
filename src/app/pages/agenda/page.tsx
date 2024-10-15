@@ -4,10 +4,8 @@ import Header from "@/app/components/header/page";
 export default function Produtos() {
     return(
         <main className="home">
-        <Header></Header>
-        
-        <div></div>
-        <CardProduto></CardProduto>
+            <Header></Header>
+            <CardProduto></CardProduto>
         </main>
        
     )

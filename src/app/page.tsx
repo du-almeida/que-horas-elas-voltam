@@ -9,8 +9,6 @@ export default function Home() {
   return (
     <main className="home">
       <Header></Header>
-      
-      <div></div>
       <ImageCarousel></ImageCarousel>
     </main>
   );
