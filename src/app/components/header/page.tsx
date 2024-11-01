@@ -1,12 +1,10 @@
-'use client'
-import { useRouter } from 'next/router';
+"use client";
+import { useRouter } from "next/router";
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 
 export default function Header() {
-
-
   return (
     <>
       <nav className="menu">
@@ -17,18 +15,27 @@ export default function Header() {
             width={100} // Largura da imagem em pixels
             height={70} // Altura da imagem em pixels
             layout="responsive" // Layout da imagem (opcional: "fixed", "intrinsic", "responsive")
-            style={{ width: '50%' }} // Reduzindo a imagem para 50% do tamanho
+            style={{ width: "50%" }} // Reduzindo a imagem para 50% do tamanho
           />
         </div>
 
         <div className="btnHeader">
-          <button className="btnHeaderItem">Inicio</button>
-          <button className="btnHeaderItem">Agenda</button>
-          <button className="btnHeaderItem">Sobre</button>
-          <button className="btnHeaderItem">Ajuda</button>
+          <Link href={"/"}>
+            <button className="btnHeaderItem">Inicio</button>
+          </Link>
+          <Link href={"/pages/agenda"}>
+            <button className="btnHeaderItem">Agenda</button>
+          </Link>
+          <Link href={"/pages/sobre"}>
+            <button className="btnHeaderItem">Sobre</button>
+          </Link>
+          <Link href={"/pages/ajuda"}>
+            <button className="btnHeaderItem">Ajuda</button>
+          </Link>
         </div>
 
+        <button className="btnHeaderEntrar">Entrar</button>
       </nav>
     </>
   );
-}      
+}

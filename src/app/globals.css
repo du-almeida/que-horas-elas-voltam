@@ -51,8 +51,6 @@
     display: inline-block;
     color: rgb(125, 123, 123);
     justify-content: space-between;
-    margin-right: 330px;
-    
 }
 
 .btnHeaderItem {
@@ -68,18 +66,130 @@
     background: #C43E3E;
 }
 
-.btnUser {
-    width: 50px;
-    height: 50px;
+.btnHeaderEntrar {
+    width: 100px;
+    height: 40px;
     color: #FEFEFE;
     background-color: #C43E3E;
-    border-radius: 100%;
-    margin-right: 30px;
+    border-radius: 10px;
+    margin-right: 50px;
     display: flex;
-    justify-items: center;
-    flex-direction:column;
+    align-items: center;
     justify-content: center;
 }
+
+/* INICIO - TELA - SOBRE */
+
+.sobre{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgSobre{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 40px;
+    margin-left: 60px;
+    margin-top: 40px;
+
+}
+
+.textoSobre{
+    text-align: justify;
+    color: #4a4a4a;
+    width: 800px;
+    margin: 40px;
+    
+    h1{
+        font-size: 32px;
+        color: #C43E3E;
+    }
+}
+
+/* FINAL - TELA - SOBRE */
+
+/* INICIO - TELA FAQ */
+.tituloFaq{
+    color: #C43E3E;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.faq{
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formFaq{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.labelFaq{
+    color: #4a4a4a;
+    margin-bottom: 16px;
+}
+
+.inputFaq{
+    height: 40px;
+    width: 480px;
+    border: #cdcecf solid;
+    border-radius: 8px;
+    padding: 10px;
+    
+}
+
+.formFaqEmailContato{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputFaqEmail{
+    height: 40px;
+    width: 275px;
+    border: #cdcecf solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 23px;
+}
+
+.inputFaqNumero{
+    height: 40px;
+    width: 180px;
+    border: #cdcecf solid;
+    border-radius: 8px;
+    padding: 10px;
+    
+}
+
+.inputFaqMensagem{
+    height: 200px;
+    width: 480px;
+    border: #cdcecf solid;
+    border-radius: 8px;
+    display: flex;
+    padding: 10px;
+}
+
+.btnFaq{
+    height: 40px;
+    width: 100px;
+    color: #FEFEFE;
+    background-color: #4A6942;
+    border-radius: 8px;
+}
+/* FINAL - TELA FAQ */
+
+
 
 /* INICIO - TELA LOGIN */
 .btnClose{

@@ -2,10 +2,10 @@
 import React from "react";
 import { Input } from "@nextui-org/react";
 import Image from "next/image";
-import styles from "./styles.module.css";
-import { EyeSlashFilledIcon } from "../../components/bottons/EyeSlashFilledIcon";
-import { EyeFilledIcon } from "../../components/bottons/EyeFilledIcon";
-import PasswordInput from "@/app/components/bottons/password";
+// import styles from "./styles.module.css";
+// import { EyeSlashFilledIcon } from "../../components/bottons/EyeSlashFilledIcon";
+// import { EyeFilledIcon } from "../../components/bottons/EyeFilledIcon";
+// import PasswordInput from "@/app/components/bottons/password";
 
 export default function Login() {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -85,7 +85,6 @@ export default function Login() {
                   name=""
                   id="inputLogin"
                   required
-                  
                 />
               </div>
 
@@ -102,11 +101,11 @@ export default function Login() {
                       onClick={toggleVisibility}
                       aria-label="toggle password visibility"
                     >
-                      {isVisible ? (
+                      {/* {isVisible ? (
                         <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
                       ) : (
                         <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-                      )}
+                      )} */}
                     </button>
                   }
                   type={isVisible ? "text" : "password"}
